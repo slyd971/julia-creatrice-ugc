@@ -78,25 +78,22 @@ export const universe = {
   ],
 };
 
-// Pas de fichiers logo fournis pour l'instant : affichés en typographie.
-// Pour passer en vrais logos, déposer les fichiers dans public/assets/brands/
-// puis ajouter un champ `logo` à chaque entrée et adapter components/Brands.tsx.
 export const brands = {
   eyebrow: "Références",
   title: "Elles m'ont fait confiance",
   items: [
-    "Garnier",
-    "Lustucru",
-    "L'Oréal",
-    "Pacha",
-    "NYX",
-    "Dr Pepper",
-    "CeraVe",
-    "Conforama",
-    "Mixa",
-    "Fleury Michon",
-    "La Roche-Posay",
-    "Pranarôm",
+    { name: "Garnier", logo: "/assets/brands/garnier.png" },
+    { name: "Lustucru", logo: "/assets/brands/lustucru.png" },
+    { name: "L'Oréal", logo: "/assets/brands/loreal.png" },
+    { name: "Pacha", logo: "/assets/brands/pacha.png" },
+    { name: "NYX", logo: "/assets/brands/nyx.png" },
+    { name: "Dr Pepper", logo: "/assets/brands/dr-pepper.png" },
+    { name: "CeraVe", logo: "/assets/brands/cerave.png" },
+    { name: "Conforama", logo: "/assets/brands/conforama.png" },
+    { name: "Mixa", logo: "/assets/brands/mixa.png" },
+    { name: "Fleury Michon", logo: "/assets/brands/fleury-michon.png" },
+    { name: "La Roche-Posay", logo: "/assets/brands/la-roche-posay.png" },
+    { name: "Pranarôm", logo: "/assets/brands/pranarom.png" },
   ],
 };
 

@@ -20,17 +20,6 @@ besoin de toucher aux composants React dans `components/`.
 
 ### ⚠️ À compléter
 
-- **Légendes des vidéos portfolio** (`portfolio.items[].alt` dans
-  `content/site.ts`) — à préciser si tu veux mentionner la marque/le contexte
-  de chaque extrait.
-- **Logos des marques** (section Références, `components/Brands.tsx`) —
-  affichés en typographie faute de fichiers logo fournis. Pour passer aux
-  vrais logos : déposer les fichiers (idéalement SVG/PNG transparent, fournis
-  par les marques ou leurs brand kits officiels) dans `public/assets/brands/`,
-  ajouter un champ `logo` à chaque entrée de `brands.items` dans
-  `content/site.ts`, puis remplacer le texte par une balise `<Image>` dans
-  `components/Brands.tsx`.
-
 Il n'y a pas de section **Témoignages** : aucun retour de marque n'a été
 fourni, donc rien n'a été inventé. Ajoute une section quand tu auras de vrais
 témoignages (le composant `Testimonials` de Sophie Beauty peut servir de

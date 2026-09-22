@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { brands } from "@/content/site";
 
 export function Brands() {
@@ -9,9 +10,15 @@ export function Brands() {
           <h2 className="display">{brands.title}</h2>
         </div>
         <div className="brands-grid">
-          {brands.items.map((name) => (
-            <div className="brand-item" key={name}>
-              {name}
+          {brands.items.map((item) => (
+            <div className="brand-item" key={item.name}>
+              <Image
+                src={item.logo}
+                alt={item.name}
+                fill
+                sizes="(max-width: 560px) 40vw, 150px"
+                style={{ objectFit: "contain" }}
+              />
             </div>
           ))}
         </div>
