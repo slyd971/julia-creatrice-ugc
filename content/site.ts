@@ -35,11 +35,10 @@ export const socialLinks = {
     url: "https://www.tiktok.com/@juliaelina_mum",
     label: "TikTok — @juliaelina_mum",
   },
-  // PLACEHOLDER — remplacer par la vraie adresse email de contact de Julia.
   email: {
-    url: "mailto:contact@julia-elina.fr",
-    label: "contact@julia-elina.fr",
-    address: "contact@julia-elina.fr",
+    url: "mailto:Julia.ugc.pro@gmail.com",
+    label: "Julia.ugc.pro@gmail.com",
+    address: "Julia.ugc.pro@gmail.com",
   },
 };
 
@@ -79,6 +78,28 @@ export const universe = {
   ],
 };
 
+// Pas de fichiers logo fournis pour l'instant : affichés en typographie.
+// Pour passer en vrais logos, déposer les fichiers dans public/assets/brands/
+// puis ajouter un champ `logo` à chaque entrée et adapter components/Brands.tsx.
+export const brands = {
+  eyebrow: "Références",
+  title: "Elles m'ont fait confiance",
+  items: [
+    "Garnier",
+    "Lustucru",
+    "L'Oréal",
+    "Pacha",
+    "NYX",
+    "Dr Pepper",
+    "CeraVe",
+    "Conforama",
+    "Mixa",
+    "Fleury Michon",
+    "La Roche-Posay",
+    "Pranarôm",
+  ],
+};
+
 export const portfolio = {
   eyebrow: "Portfolio",
   title: "Exemples de contenu",
@@ -98,6 +119,11 @@ export const portfolio = {
     {
       video: "/assets/portfolio-3.mp4",
       poster: "/assets/portfolio-3-poster.jpg",
+      alt: "Extrait vidéo UGC réalisé par Julia",
+    },
+    {
+      video: "/assets/portfolio-4.mp4",
+      poster: "/assets/portfolio-4-poster.jpg",
       alt: "Extrait vidéo UGC réalisé par Julia",
     },
   ],

@@ -5,6 +5,7 @@ import { Stats } from "@/components/Stats";
 import { Bio } from "@/components/Bio";
 import { Quote } from "@/components/Quote";
 import { Universe } from "@/components/Universe";
+import { Brands } from "@/components/Brands";
 import { Portfolio } from "@/components/Portfolio";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
@@ -20,6 +21,7 @@ export default function Home() {
         <Bio />
         <Quote />
         <Universe />
+        <Brands />
         <Portfolio />
         <Contact />
       </main>

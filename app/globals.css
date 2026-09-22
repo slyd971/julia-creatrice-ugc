@@ -371,10 +371,32 @@ section { padding: clamp(3.5rem, 8vw, 7rem) clamp(1.5rem, 6vw, 5rem); }
   .universe-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ---------- Brands ---------- */
+.brands { background: var(--card); }
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.9rem;
+}
+.brand-item {
+  background: var(--bg);
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  padding: 1.3rem 1rem;
+  text-align: center;
+  font-family: var(--font-display), serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+@media (max-width: 560px) {
+  .brands-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ---------- Portfolio ---------- */
 .portfolio { background: var(--card); }
 .portfolio-intro { max-width: 40rem; font-size: 1.02rem; line-height: 1.65; color: var(--muted); margin-top: -1rem; margin-bottom: 2.5rem; }
-.portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
 .portfolio-item {
   position: relative; border-radius: 20px; overflow: hidden;
   border: 1px solid var(--line); box-shadow: var(--shadow);
