@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bodoni_Moda, Manrope } from "next/font/google";
 import "./globals.css";
 import { brand, seo } from "@/content/site";
@@ -38,14 +38,18 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: siteUrl,
     siteName: brand.name,
-    title: brand.name,
+    title: `${brand.name} · ${brand.tagline}`,
     description: seo.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: brand.name,
+    title: `${brand.name} · ${brand.tagline}`,
     description: seo.description,
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#171310",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

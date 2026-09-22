@@ -1,10 +1,23 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { brand } from "@/content/site";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const alt = `${brand.name} — ${brand.tagline}`;
 
-export default function OpengraphImage() {
+export default async function OpengraphImage() {
+  // Polices embarquées explicitement : next/og (Satori) ignore les
+  // fontFamily/fontStyle génériques ("serif", "italic") sans fichier de
+  // police réellement chargé — sans ça le rendu retombe sur une police
+  // système, ce qui cassait l'identité visuelle (Bodoni Moda italique) sur
+  // la carte de partage affichée par les réseaux sociaux.
+  const displayFont = readFileSync(
+    join(process.cwd(), "app", "fonts", "BodoniModa-Italic-600.ttf")
+  );
+  const bodyFont = readFileSync(join(process.cwd(), "app", "fonts", "Manrope-Bold.ttf"));
+
   return new ImageResponse(
     (
       <div
@@ -21,6 +34,7 @@ export default function OpengraphImage() {
       >
         <div
           style={{
+            fontFamily: "Manrope",
             fontSize: 28,
             fontWeight: 700,
             letterSpacing: 6,
@@ -29,13 +43,13 @@ export default function OpengraphImage() {
             marginBottom: 32,
           }}
         >
-          Créatrice de contenu & UGC
+          {brand.tagline}
         </div>
         <div
           style={{
-            fontFamily: "serif",
+            fontFamily: "Bodoni Moda",
             fontStyle: "italic",
-            fontSize: 96,
+            fontSize: 128,
             fontWeight: 600,
             color: "#F9F2E9",
           }}
@@ -44,8 +58,9 @@ export default function OpengraphImage() {
         </div>
         <div
           style={{
+            fontFamily: "Manrope",
             fontSize: 32,
-            fontWeight: 600,
+            fontWeight: 700,
             color: "#ECE1D4",
             marginTop: 36,
             textAlign: "center",
@@ -55,6 +70,12 @@ export default function OpengraphImage() {
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        { name: "Bodoni Moda", data: displayFont, style: "italic", weight: 600 },
+        { name: "Manrope", data: bodyFont, style: "normal", weight: 700 },
+      ],
+    }
   );
 }
