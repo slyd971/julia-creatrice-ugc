@@ -108,23 +108,26 @@ export const portfolio = {
     {
       video: "/assets/portfolio-1.mp4",
       poster: "/assets/portfolio-1-poster.jpg",
-      // PLACEHOLDER — préciser la marque/le contexte de cet extrait si besoin.
-      alt: "Extrait vidéo UGC réalisé par Julia",
+      caption: "Home Cooking by Julia",
+      alt: "Extrait vidéo UGC — Home Cooking by Julia",
     },
     {
       video: "/assets/portfolio-2.mp4",
       poster: "/assets/portfolio-2-poster.jpg",
-      alt: "Extrait vidéo UGC réalisé par Julia",
+      caption: "Partenariat GarnierSkincare — Beauté",
+      alt: "Extrait vidéo UGC — partenariat GarnierSkincare (beauté)",
     },
     {
       video: "/assets/portfolio-3.mp4",
       poster: "/assets/portfolio-3-poster.jpg",
-      alt: "Extrait vidéo UGC réalisé par Julia",
+      caption: "La Salle du Temps · Paris (75004) — Coaching sportif",
+      alt: "Extrait vidéo UGC — La Salle du Temps, Paris 75004 (coaching sportif)",
     },
     {
       video: "/assets/portfolio-4.mp4",
       poster: "/assets/portfolio-4-poster.jpg",
-      alt: "Extrait vidéo UGC réalisé par Julia",
+      caption: "Koneo Studio · Paris (75019) — Photobooth coréen",
+      alt: "Extrait vidéo UGC — Koneo Studio, Paris 75019 (photobooth coréen)",
     },
   ],
 };

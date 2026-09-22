@@ -55,6 +55,7 @@ export function Portfolio() {
                   <PlayIcon />
                 </span>
               </span>
+              <span className="portfolio-caption">{item.caption}</span>
             </button>
           ))}
         </div>
@@ -86,6 +87,7 @@ export function Portfolio() {
               autoPlay
               playsInline
             />
+            <figcaption>{portfolio.items[openIndex].caption}</figcaption>
           </figure>
         </div>
       )}
